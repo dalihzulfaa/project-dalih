@@ -81,7 +81,7 @@ with upload_data:
     #     df = pd.read_csv(uploaded_file)
     #     st.write("Nama File Anda = ", uploaded_file.name)
     #     st.dataframe(df)
-    df = pd.read_csv('https://raw.githubusercontent.com/08-Ahlaqul-Karimah/machine-Learning/main/test.csv')
+    df = pd.read_csv('https://raw.githubusercontent.com/08-Ahlaqul-Karimah/machine-Learning/main/winequalityN.csv')
     st.dataframe(df)
 
 with preprocessing:
@@ -94,10 +94,10 @@ with preprocessing:
     - min = nilai minimum semua data asli
     - max = nilai maksimum semua data asli
     """)
-    df = df.drop(columns=['id', 'dual_sim', 'four_g', 'three_g', 'touch_screen', 'wifi'])
+    df = df.drop(columns=[''])
     #Mendefinisikan Varible X dan Y
-    X = df[['battery_power', 'clock_speed', 'fc', 'int_memory', 'm_dep', 'mobile_wt', 'n_cores', 'pc', 'px_height', 'px_width', 'ram', 'sc_h', 'sc_w', 'talk_time']]
-    y = df['blue'].values
+    X = df[['fixed_acidity', 'volatile_acidity', 'citric_acid', 'residual_sugar', 'chlorides', 'free_sulfur_dioxide', 'total_sulfur_dioxide', 'density', 'pH', 'sulphates', 'alcohol', 'quality']]
+    y = df['type'].values
     df
     X
     df_min = X.min()
@@ -116,7 +116,7 @@ with preprocessing:
     st.write(scaled_features)
 
     st.subheader('Target Label')
-    dumies = pd.get_dummies(df.blue).columns.values.tolist()
+    dumies = pd.get_dummies(df.type).columns.values.tolist()
     dumies = np.array(dumies)
 
     labels = pd.DataFrame({
