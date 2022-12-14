@@ -246,20 +246,18 @@ with modeling:
 with implementation:
     with st.form("my_form"):
         st.subheader("Implementasi")
-        battery_power = st.number_input('masukkan Total energi yang dapat disimpan baterai dalam satu waktu diukur dalam mAh (battery power) : ')
-        clock_speed = st.number_input('masukkan kecepatan di mana mikroprosesor mengeksekusi instruksi (clock speed) : ')
-        fc = st.number_input('masukkan Kamera depan mega piksel (fc) : ')
-        int_memory = st.number_input('masukkan Memori Internal dalam Gigabyte (int_memory) : ')
-        m_dep = st.number_input('masukkan Kedalaman Seluler dalam cm (m_dep) : ')
-        mobile_wt = st.number_input('masukkan Berat ponsel (mobile_wt) : ')
-        n_cores = st.number_input('masukkan Jumlah inti prosesor (n_cores) : ')
-        pc = st.number_input('masukkan Mega piksel Kamera Utama (pc) : ')
-        px_height = st.number_input('masukkan Tinggi Resolusi Piksel (px_height) : ')
-        px_width = st.number_input('masukkan lebar Resolusi Piksel (px_width) : ')
-        ram = st.number_input('masukkan Memori Akses Acak dalam Megabita (ram) : ')
-        sc_h = st.number_input('masukkan Tinggi layar ponsel dalam cm (sc_h) : ')
-        sc_w = st.number_input('masukkan Lebar layar ponsel dalam cm (sc_w) : ')
-        talk_time = st.number_input('masukkan waktu terlama satu kali pengisian daya baterai akan bertahan saat Anda berada (talk_time) : ')
+        volatile_acidity = st.number_input('masukkan keasaman yang mudah menguap (volatile_acidity) : ')
+        citric_acid = st.number_input('masukkan asam sitrat (citric_acid) : ')
+        residual_sugar = st.number_input('masukkan sisa gula(residual_sugar) : ')
+        chlorides = st.number_input('masukkan klorida (chlorides) : ')
+        free_sulfur_dioxide = st.number_input('masukkan belerang dioksida bebas (free_sulfur_dioxide) : ')
+        total_sulfur_dioxide = st.number_input('masukkan sulfur dioksida total (total_sulfur_dioxide) : ')
+        density = st.number_input('masukkan kepadatan (density) : ')
+        pH = st.number_input('masukkan PH (pH) : ')
+        sulphates = st.number_input('masukkan sulfat (sulphates) : ')
+        alcohol = st.number_input('masukkan alkohol (alcohol) : ')
+        quality = st.number_input('masukkan kualitas (quality) : ')
+        
       
         
         model = st.selectbox('Pilihlah model yang akan anda gunakan untuk melakukan prediksi?',
@@ -268,20 +266,17 @@ with implementation:
         prediksi = st.form_submit_button("Submit")
         if prediksi:
             inputs = np.array([
-                battery_power, 
-                clock_speed, 
-                fc, 
-                int_memory, 
-                m_dep, 
-                mobile_wt, 
-                n_cores, 
-                pc, 
-                px_height, 
-                px_width, 
-                ram, 
-                sc_h, 
-                sc_w, 
-                talk_time
+                volatile acidity,
+                citric acid,
+                residual_sugar, 
+                chlorides, 
+                free sulfur dioxide, 
+                total sulfur dioxide, 
+                density, 
+                pH, 
+                sulphates, 
+                alcohol, 
+                quality
             ])
 
             df_min = X.min()
