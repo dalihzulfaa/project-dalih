@@ -266,12 +266,12 @@ with implementation:
         prediksi = st.form_submit_button("Submit")
         if prediksi:
             inputs = np.array([
-                volatile acidity,
-                citric acid,
+                volatile_acidity,
+                citric_acid,
                 residual_sugar, 
                 chlorides, 
-                free sulfur dioxide, 
-                total sulfur dioxide, 
+                free_sulfur_dioxide, 
+                total_sulfur_dioxide, 
                 density, 
                 pH, 
                 sulphates, 
