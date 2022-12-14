@@ -181,7 +181,7 @@ with modeling:
         gaussian = GaussianNB()
         gaussian = gaussian.fit(training, training_label)
 
-        # Predicting the Test set results
+        # Predicting the Test set results 
         y_pred = gaussian.predict(test)
     
         y_compare = np.vstack((test_label,y_pred)).T
