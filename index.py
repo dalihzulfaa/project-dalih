@@ -96,7 +96,7 @@ with preprocessing:
     """)
     df = df.drop(columns=['fixed acidity'])
     #Mendefinisikan Varible X dan Y
-    X = df[['volatile_acidity', 'citric_acid', 'residual_sugar', 'chlorides', 'free_sulfur_dioxide', 'total_sulfur_dioxide', 'density', 'pH', 'sulphates', 'alcohol', 'quality']]
+    X = df[['volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'free sulfur_dioxide', 'total sulfur dioxide', 'density', 'pH', 'sulphates', 'alcohol', 'quality']]
     y = df['type'].values
     df
     X
